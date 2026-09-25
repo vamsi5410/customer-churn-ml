@@ -855,3 +855,13 @@ git push origin main
 ```
 
 
+## Live Demo
+
+### Streamlit Dashboard
+https://churnai-customer-churn.streamlit.app
+
+### FastAPI Backend
+https://churnai-api.onrender.com
+
+### API Documentation
+https://churnai-api.onrender.com/docs
