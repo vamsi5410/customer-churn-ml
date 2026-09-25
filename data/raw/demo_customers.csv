@@ -1,0 +1,6 @@
+customer_id,tenure,monthly_charges,total_charges,contract,internet_service,payment_method,tech_support,online_security
+C-DEMO-001,4,109,436,Month-to-month,Fiber optic,Electronic check,No,No
+C-DEMO-002,48,55,2640,Two year,DSL,Credit card,Yes,Yes
+C-DEMO-003,12,85,1020,One year,Fiber optic,Bank transfer,No,Yes
+C-DEMO-004,60,49,2940,Two year,DSL,Credit card,Yes,Yes
+C-DEMO-005,3,115,345,Month-to-month,Fiber optic,Electronic check,No,No

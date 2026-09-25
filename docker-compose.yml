@@ -1,0 +1,36 @@
+services:
+  api:
+    build: .
+    container_name: churnai-api
+    environment:
+      DATABASE_URL: postgresql+psycopg://churnai:churnai@db:5432/churnai
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  dashboard:
+    build: .
+    container_name: churnai-dashboard
+    command: streamlit run dashboard/app.py --server.address=0.0.0.0 --server.port=8501
+    environment:
+      API_URL: http://api:8000
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+
+  db:
+    image: postgres:16
+    container_name: churnai-db
+    environment:
+      POSTGRES_USER: churnai
+      POSTGRES_PASSWORD: churnai
+      POSTGRES_DB: churnai
+    ports:
+      - "5432:5432"
+    volumes:
+      - churnai_pgdata:/var/lib/postgresql/data
+
+volumes:
+  churnai_pgdata:
